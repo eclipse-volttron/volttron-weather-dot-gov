@@ -12,8 +12,8 @@ packages = [ { include = "weather_dot_gov", from = "src" } ]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
-volttron-core = ">=2.0.0rc13"
-pint = ">=0.25.2"  # 0.17 in monolithic.
+grequests = "0.7.0"
+volttron-lib-base-weather = ">=2.0.0rc0"
 
 [tool.poetry.group.dev.dependencies]
 # None yet
@@ -36,3 +36,5 @@ split_before_logical_operator = true
 requires = ["poetry-core>=2.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.poetry.scripts]
+volttron-weather-dot-gov = "weather_dot_gov.agent:main"

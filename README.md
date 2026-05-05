@@ -6,13 +6,6 @@ caching of recently requested data, as well as mapping of weather point
 names from NOAA\'s naming scheme to the standardized CF-conventions
 scheme.
 
-## Requirements
-
-The WeatherDotgov agent requires the Pint package. This package can be
-installed in an activated environment with:
-
-    pip install pint
-
 ## Configuration
 
 The following is an example configuration for the Weather.gov agent. All
