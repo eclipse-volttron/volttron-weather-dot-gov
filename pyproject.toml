@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "volttron-weather-dot-gov"
+version = "2.0.0rc0"
+description = "A weather agent using the weather.gov API to collect weather data for the VOLTTRON platform."
+authors = ["VOLTTRON Team <volttron@pnnl.gov>"]
+license = "Apache License 2.0"
+readme = "README.md"
+repository = "https://github.com/eclipse-volttron/volttron-lib-base-weather"
+homepage = "https://github.com/eclipse-volttron/volttron-lib-base-weather"
+keywords = []
+packages = [ { include = "weather_dot_gov", from = "src" } ]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+grequests = "0.7.0"
+volttron-lib-base-weather = ">=2.0.0rc0"
+
+[tool.poetry.group.dev.dependencies]
+# None yet
+
+[tool.yapfignore]
+ignore_patterns = [
+    ".venv/**",
+    ".pytest_cache/**",
+    "dist/**",
+    "docs/**"
+]
+
+[tool.yapf]
+based_on_style = "pep8"
+spaces_before_comment = 4
+column_limit = 99
+split_before_logical_operator = true
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+volttron-weather-dot-gov = "weather_dot_gov.agent:main"
